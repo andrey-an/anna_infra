@@ -1,2 +1,2 @@
 # anna_infra
-play-travis
+play-travis test
