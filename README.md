@@ -12,5 +12,5 @@ gcloud compute instances create reddit-app\
 
 Данные:
 testapp_IP = 35.198.125.128
-testapp_port = 9292 
+testapp_port = 9292
 
