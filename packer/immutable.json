@@ -5,11 +5,11 @@
             "project_id": "{{ user `project_id` }}",
             "image_name": "reddit-base-{{timestamp}}",
 	    "image_description": "reddit app",
-            "image_family": "reddit-base",
+            "image_family": "reddit-full",
             "source_image_family": "{{ user `source_image_family` }}",
             "zone": "europe-west1-b",
-            "ssh_username": "appuser",
-	    "disk_size": "10GB",
+            "ssh_username": "master",
+	    "disk_size": "10",
 	    "disk_type": "pd-standard",
 	    "tags": ["puma-server"],
             "machine_type": "{{ user `machine_type` }}"
@@ -25,6 +25,30 @@
             "type": "shell",
             "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
-        }
+        },
+        {
+            "type": "file",
+            "source": "files/reddit",
+            "destination": "/home/master/"
+        },
+	{
+      	    "inline": [
+      	      "cd reddit && bundle install"
+      	    ],
+      	    "type": "shell"
+	},
+        {
+            "type": "file",
+            "source": "files/puma.service",
+            "destination": "/home/master/"
+        },
+	{
+      	    "inline": [
+      	      "sudo cp puma.service /etc/systemd/system/",
+      	      "sudo chmod 644 /etc/systemd/system/puma.service",
+      	      "sudo systemctl enable /etc/systemd/system/puma.service"
+      	    ],
+      	    "type": "shell"
+	}
     ]
 }

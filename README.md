@@ -14,3 +14,15 @@ gcloud compute instances create reddit-app\
 testapp_IP = 35.198.125.128
 testapp_port = 9292
 
+Home tast #7
+
+1. Создан шаблон пакер для создания образа сервера с приложением. Шаблон принимает параметры из файла.
+2. Скрипт для запуска экземпляра VM обзара пакера:
+gcloud compute instances create reddit-app\
+  --boot-disk-size=10GB \
+  --image-family reddit-full \
+  --machine-type=g1-small \
+  --tags puma-server \
+  --tags default-allow-ssh \
+  --restart-on-failure
+
