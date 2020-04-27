@@ -38,4 +38,3 @@ variable ssh_user1 {
 variable ssh_key1 {
   description = "User"
 }
-
