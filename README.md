@@ -26,3 +26,7 @@ gcloud compute instances create reddit-app\
   --tags default-allow-ssh \
   --restart-on-failure
 
+Home tast #8
+
+Получен опыт работы с terraform. Добавление нескольких ssh ключен, работа с переменными параметров.
+
