@@ -37,3 +37,8 @@ Home tast #9
 2. Управление файлами и параметрами модулей.
 3. Использование модуля для создания bucket и перенос в него terraform.tfstate. Перенос terraform.tfstate на локальный хост.
 
+Home task #10
+
+1. Использование модулей позволяет соблюдать идемпотентность команд.
+2. Получение списка VM gcloud (gcloud compute instances list --format="csv(name,networkInterfaces.[0].accessConfigs.[0].natIP)")
+
