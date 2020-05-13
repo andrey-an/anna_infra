@@ -42,3 +42,9 @@ Home task #10
 1. Использование модулей позволяет соблюдать идемпотентность команд.
 2. Получение списка VM gcloud (gcloud compute instances list --format="csv(name,networkInterfaces.[0].accessConfigs.[0].natIP)")
 
+Home task #11
+
+1. Создание и работа с playbook ansible. Разбивка playbook по задачам.
+2. Изпользование gcp inventory для ansbile.
+3. Использование provisioner ansible для пакера.
+
