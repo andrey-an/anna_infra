@@ -1,0 +1,16 @@
+plugin: gcp_compute             # name the plugin you want to use (use `ansible-doc -t inventory -l` to list available plugins)
+projects:
+  - infra-274916            # Id of your gcp project
+
+filters: []
+auth_kind: serviceaccount       # gcp authentication kind. with service account you should provide the service account json key file to authenticate
+service_account_file: ~/key.json   # Service account json keyfile
+
+#keyed_groups:
+#  - prefix: reddit_
+#  - key: name
+
+groups:
+  db: "'db' in name"
+  app: "'app' in name"
+
