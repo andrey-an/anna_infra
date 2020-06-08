@@ -9,3 +9,9 @@ variables.json
 key.json
 jdauphant.nginx
 vault.key
+
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
