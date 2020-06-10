@@ -1,3 +1,6 @@
+
+Home task #6
+
 1. Код для создания VM:
 gcloud compute instances create reddit-app\
   --boot-disk-size=10GB \
